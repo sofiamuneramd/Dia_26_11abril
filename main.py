@@ -36,6 +36,9 @@ print(tamaño1.values)
 
 print(tamaño1.index)
 
+# Podemos realizar operaciones basicas con las series
+
+tamaño2=tamaño1+5
 
 # Ahora importamos Excel writer para poder crear un libro y hoja nueva
 
@@ -46,6 +49,7 @@ from pandas import ExcelWriter
 file=ExcelWriter('Copia1.xls')
 tamaño0.to_excel(file,'Hoja1')
 tamaño1.to_excel(file,'Hoja2')
+tamaño2.to_excel(file,'Hoja2')
 file.save()
 
 
